@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Te Amo</title>
+<style>
+    body {
+        background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+        text-align: center;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        margin: 0;
+        padding: 50px;
+    }
+
+    h1 {
+        font-size: 50px;
+        text-shadow: 2px 2px 5px #d6336c;
+    }
+
+    h2 {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+
+    .firma {
+        font-style: italic;
+        font-size: 24px;
+        margin-top: 30px;
+    }
+
+    .corazon {
+        position: absolute;
+        font-size: 30px;
+        animation: flotar 5s linear infinite;
+    }
+
+    @keyframes flotar {
+        0% { transform: translateY(100vh); opacity: 1; }
+        100% { transform: translateY(-10vh); opacity: 0; }
+    }
+</style>
+</head>
+<body>
+
+<h1>💖 ¿Querés ser mi San Valentín? 💖</h1>
+<h2>Te amo mucho ❤️</h2>
+<p>Desde que estás en mi vida, todo es más lindo y feliz ✨🌹</p>
+<div class="firma">De Mumo para Muma 💌</div>
+
+<script>
+    function crearCorazon() {
+        const corazon = document.createElement("div");
+        corazon.classList.add("corazon");
+        corazon.innerHTML = "❤️";
+        corazon.style.left = Math.random() * window.innerWidth + "px";
+        corazon.style.fontSize = (20 + Math.random() * 30) + "px";
+        document.body.appendChild(corazon);
+        setTimeout(() => corazon.remove(), 5000);
+    }
+
+    setInterval(crearCorazon, 500);
+</script>
+
+</body>
+</html>
